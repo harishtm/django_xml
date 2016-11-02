@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trucks>
+     {% for obj in query_set %}
+        <truck>
+            <Customer_id>{#{obj.info4}#}</Customer_id>
+            <truck_id>{#{obj.info5}#}</truck_id>
+            <mobilenumber>{{obj.info6}}</mobilenumber>
+            <utc_datetime>{{obj.get_date}} {{obj.get_time}}</utc_datetime>
+            <latitude>{{obj.get_latitude}}</latitude>
+            <longitude>{{obj.get_longitude}}</longitude>
+            <gsms>{{obj.info22}}</gsms>
+            <bs>{{obj.info24}}</bs>
+        </truck>
+     {% endfor %}
+</trucks>
+
